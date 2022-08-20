@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /*  */
+
+
+
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+
+        }
+        /*
+
+        *{
+
+        } this is a universal selector. you can give box-sizing inside it which will apply to the all blocks inside the style.
+        you can set margin 0 and padding 0 which you can change this margin and padding inside the blocks where you define properties of the blocks.
+        
+        */
+             
+
+         body{
+            background-color:#100322c7;
+         }
+
+        .container{
+            background-color: rgb(231,230,241);
+            border: 3px solid rgb(64,6,119);
+            /* outer most layer of box model is margin
+                it's inner layer is border
+                then innermost is padding
+                 and inside the padding content is 
+                  present.
+                   */
+              /*padding: 100px; 
+           padding creates space between content and box*/
+            /* we can set padding-right , which creates space from rightside to the content. */
+            /* we can set padding-left , which creates space from leftside to the content. */
+            /*we can set padding-top, which creates space from top to the content.*/
+            /* we can set paddig-bottom , which creates space from bottom to the 
+             content. */
+
+            /* padding: 23px 56px 6px 78px;  
+            you can set padding top,right,bottom,left; at one time by using this.this is also applicable for margin. */
+
+         padding: 34px 19px;
+         /* padding: y(top/bottom)  x(left/right) , so here when you want the same px for top and bottom and same for both left and right then we can use this.then whatever changes you will create will effect in group like changes created to y will affect top and bottom,while change to x will affect left and right .
+         but x and y may have different values . 
+         this same concept can be applied to the 
+         margin also.
+         */
+
+         
+
+
+
+
+
+
+
+
+            /*margin:34px; margin creates space from outside. looks like box is separate from outside borders.*/
+            /*
+             margin-left: 300px;
+                margin-right: 100px;
+                margin-bottom: 50px;
+                margin-top: 100px;
+            */
+            /* margin: 23px 56px 6px 78px; 
+             you can use this when you have to assign values at one time, which is for top,bottom, left and right.
+            */
+           
+               margin: 14px 19px;  
+            /* y for top and bottom (14px), x for left and right.(19px) */
+            border-radius: 23px;
+            /* border radius creates circular to the edges. */
+            width: 533px;
+            /* by using box-sizing : border-box; there will be no change will happen in the width of the box when you creating changes to the padding .width of the box will remain constant. */
+            box-sizing: border-box;
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>this is my heading </h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates, facere dolorem
+            molestias iste, repudiandae, corporis illum reiciendis incidunt accusantium sapiente soluta expedita.</p>
+         
+    </div>
+
+
+    <div class="container">
+        <h3>this is my heading </h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates, facere dolorem
+            molestias iste, repudiandae, corporis illum reiciendis incidunt accusantium sapiente soluta expedita.</p>
+         
+    </div>
+
+    <div class="container">
+        <h3>this is my heading </h3>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates, facere dolorem
+            molestias iste, repudiandae, corporis illum reiciendis incidunt accusantium sapiente soluta expedita.</p>
+         
+    </div>
+</body>
+
+</html>

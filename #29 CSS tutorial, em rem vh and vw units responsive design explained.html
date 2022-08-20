@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size units</title>
+    <style>
+        .html{
+            font-size: 25px;
+        }
+
+        .container{
+            font-size: 10px;
+            border: 2px solid red;
+            width: 400px;
+            height: 100vh;
+            
+
+            /* vh is view port height
+               it will box in total height 
+                of the page. */
+                width: 100vw;
+                /* here vw is for view port width.
+                    , it has taken all the width(100%) of the page.
+                     */
+
+        }
+
+       h1{
+         text-align: center;
+       }
+         
+      #first{
+           /* font-size: 10em;
+             10em , it will do 10 times of its parent.font size 
+              here the parent is container whose size is 10px so 
+                doing 10 times of 10px will be 100px .
+                 so we can say that 10em = 100px for this h1. */
+           font-size: 3em;
+           padding: 3em;
+           /* here padding will be 3 * 30px = 90px
+              here font-size = 3em means 30px.
+              when you want to resize element 
+               according to it's parent then use
+                em . but when you want to resize 
+                 element according to it's root 
+                  then use rem. rem will be used 
+                   when you want that whole size 
+                   content would be the change accordingly 
+                    then also we use rem. 
+              */
+
+            
+
+        }
+
+        #second{
+            font-size:3rem ;
+            /* resize the size relative to it's root element
+               now here the root element is html whose size is 
+                 25px so here font-size of the second will be
+                   75px. */
+            padding: 3rem;
+            /* same concept as font-size.
+            it's size is also 75px. */
+
+
+        }
+
+        
+        
+        
+    </style>
+</head>
+<body>
+    <!--#responsive Design:
+             # when  you are doing something
+             action on website and in return it will
+              responding on actions.
+             # endless new resolutions and devices are
+               difficult to support separately for a 
+                 web developer.
+             # responsive design is a way for a web developer
+                to make his website adapt to all the devices 
+                  and resolutions.
+             # responsive design is a necessity and
+              not a luxury anymore.
+             # website should support on various devices like 
+                mobile tablet and computer desktop.
+             
+
+        # Various ways to achieve responsive design:
+            # setting up to viewport(html boiler plate.)
+            # use max-width/max-height, to adjust width,
+              webpage content changes.
+            #using css media queries , you can set and 
+              can inject code/properties and can change the visual effect.
+            # use of different font units , using rem/vh/vw
+             units over pixels.-->
+
+    
+
+ <div class="container">
+    <h1 id="first">This is first heading</h1>
+    <h1 id="second">This is  second heading</h1>
+    <h1 id="third">This is third heading</h1>
+    
+
+
+ </div>
+            

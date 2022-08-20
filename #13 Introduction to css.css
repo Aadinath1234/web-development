@@ -1,0 +1,50 @@
+/* #css is cascading style sheets .
+   #it gives style to raw html.
+   #it is used to give style to our web pages.
+   #it is used to make websites responsive.means when you open websited in mobile
+    and tablet or in a computer then it takes size according to device.
+    
+   #while the html is used to structure a website.
+   #css takes responsibility of design.
+   # it makes our websites beautiful and modern looking.
+
+   # p{ color: blue;}
+     so here p is selector , which tells that where should be the 
+      modification done.it tells about the location where we want changes.
+          meaning of p is paragraph , color:blue will be apply to all the paragraphs.
+           # color is property
+           #blue is value
+           # so if we see the syntax : selector{property:value;}.
+    #css syntax: 
+        header, p.intro{
+                         background-color: red;
+                         border-radius: 3px;
+                        }
+
+         #here header and p.intro are the group of selectors.
+         #{
+                         background-color: red;
+                         border-radius: 3px;
+                        }  , this is declaration block.
+                    all this will be applied to header and class intro (p.intro).
+
+
+        # there is three ways to add css to the markup:
+             # html code is called markup.
+             #1. inline css:
+                      all modification applied to any particular one line only.
+             #2. Internal css:
+                        css is kept inside any tag like head tag .
+                             so inside the head we have style tag where changes are done.
+             #3. External css:
+                    css is kept separately inside a .css style sheet.
+                    here we take css in a another file and we will call this file and can apply 
+                    its content inside our file. 
+                            #uses of external css: 1. write css in .css file
+                                                   2. include that css file to your html code.
+                   
+         
+
+          
+
+     */

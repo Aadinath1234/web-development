@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Alignment</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+
+   <style>
+      /*  */
+      * {}
+
+      body {
+         font-family: 'Edu TAS Beginner', cursive;
+      }
+
+      .container {
+         background-color: sandybrown;
+         width: 900px;
+         border: 3px solid purple;
+         /* margin: auto;  here margin auto takes equal spacing on left and right side  
+           of the page.whatever element you want  to be in center then use margin auto . */
+         margin: 33px auto;
+         /* here auto is for left and right side x axis
+                              33px is for upside which is for y side(y axis). */
+
+
+      }
+
+      .item {
+         border: 3px solid grey;
+         margin: 12px 3px;
+         padding: 12px 3px;
+         background: rgb(248, 238, 238);
+      }
+
+      #fruits {
+         float: left;
+         /* float works as floating on the webpage. */
+         width: 48%;
+      }
+
+      #computer {
+         float: right;
+         width: 48%;
+      }
+
+      #stationary {
+         /* float:left; */
+         width: 100%;
+         /* clear:left; */
+         clear: both;
+         /* clear left is stands for that which is float left element is present that should not cover it or overlap it. while the clear right has no effect on the content.in simple words  clear left is for no float left element is not allowed to overlap it.
+
+         when you float right to computer then it try to overlap on stationary so we will choose clear: both(left and right ) means that float left and float right both the item are not allowed to overlap on it.
+         */
+
+      }
+
+      p,
+      h3 {
+         text-align: right;
+         /*text shift towards right. */
+         text-align: left;
+         /* last written text will overwrite it's previously written text. so text here shifts to leftside.*/
+         text-align: center;
+         /* text shifts towards center. */
+         text-align: justify;
+         /*it adjusts text according to the page size. or in a default manner.*/
+      }
+
+      h1 {
+         margin:23px auto;
+         width: 455px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <h1>Welcome to My Store</h1>
+      <div id="fruits" class="item">
+         <h3>Fruits</h3>
+         <p id="fruitspara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia optio natus
+            hic velit sit. Tempora eos necessitatibus rerum quia culpa? Enim saepe optio molestias eum, aliquid
+            provident! Voluptates, excepturi tenetur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quae libero illo et voluptatibus rerum
+            adipisci qui quis, cum exercitationem nihil, aspernatur distinctio. Itaque velit fuga asperiores debitis
+            voluptates iure quo quam vitae aspernatur?
+
+         </p>
+
+      </div>
+      <div id="computer" class="item">
+         <h3>computer</h3>
+         <p id="computerpara" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, voluptas
+            officiis. Eligendi accusantium consectetur est obcaecati excepturi tempore dignissimos amet molestias alias
+            nesciunt, temporibus placeat facilis magni dolorem numquam . Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Perspiciatis, quod eaque nemo deleniti aut autem. Suscipit at, ullam unde obcaecati
+            excepturi sequi, sint, voluptatibus ea ipsa modi illum mollitia perspiciatis. Repudiandae veniam illum
+            iusto?
+         </p>
+
+      </div>
+
+      <div id="stationary" class="item">
+         <h3>stationary</h3>
+         <p id="stationarypara" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
+            corrupti odit id eaque natus. Numquam tenetur ut necessitatibus placeat velit error harum esse officiis hic.
+            Eos magni adipisci sapiente quasi?</p>
+
+      </div>
+
+      <div id="glasses" class="item">
+         <h3>glasses</h3>
+         <p id="glassespara" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
+            corrupti odit id eaque natus. Numquam tenetur ut necessitatibus placeat velit error harum esse officiis hic.
+            Eos magni adipisci sapiente quasi?</p>
+
+      </div>
+
+
+
+
+
+   </div>
+</body>
+
+</html>

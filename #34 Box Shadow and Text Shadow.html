@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        /* use of flex will take all
+          content in a row . */
+
+    }
+
+    .card{
+        padding: 23px 12px;
+        /* border: 2px solid red; */
+        margin:23px 12px;
+        background-color: burlywood;
+        /* box-shadow: 10px 10px        darkred; */
+        /* when the box shadow is in negative then it is shifted to opposite side like if top right when negative then it will become
+         left bottom same with when bottom left side is negative then it will become right top  of the block.apperance of the color is like shadow behind the block .*/
+
+
+
+        /* syntax of the box-shadow:  
+            offset-x , offset-y, blur-radius, spread-radius , color ;
+           */
+
+
+
+
+        /* box-shadow: 10px 10px 23px       darkred;
+          here inside the box-shadow
+             23px is the #blur radius , which is showing the blur effect of color to the block. */
+
+
+
+
+           /*   box-shadow: 10px 10px 23px  34px     darkred;
+             here 34px is the spread radius.so spread radius , spreads the color all around inside the box. */
+
+            /* box-shadow: 10px 10px 23px  34px   rgb(71,172,172,0.5);
+               here 0.5 is for alpha means that it is used to
+                  decide the darkness of the color.how dense dark the color should
+                    be. */
+                   /*  box-shadow:inset 3px 5px green;
+                    when you want box shadow inside 
+                      the block then you can use inset.
+                      3px for +ve shadow will be inside from left of the block
+                        when -ve shadow will come from its opposite side that 
+                          is right of the block
+                          5px when +ve then shadow will come from top of the block
+                            when -ve then shadow will come inside from its opposite side
+                               which is bottom of the block. */
+
+                box-shadow: 3px 5px green,4px 6px red;
+                /* when you want multiple shadow in one block then 
+                   you can use by this way. */
+
+
+
+
+
+
+
+    }
+    
+    .card h1{
+                /* text-shadow: 2px 1px white; */
+                text-shadow: 2px 1px 3px white;
+                /*  here 3px is for blur effect.*/
+               }
+               /* text shadow is used to give 
+                  shadow to the text of the content. */
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+           <h1> this is c++ course</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, neque ullam! Id sequi eius minima optio consequuntur. Voluptatem voluptas, minus similique consectetur quo ad nulla eius fuga, dolorem perspiciatis harum voluptatibus unde libero adipisci.</p>
+        </div>
+        <div class="card" id="card-2">
+           <h1> this is html course.</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad voluptatibus praesentium dolore corporis mollitia, natus quae officiis itaque laborum dolores officia a illum nesciunt provident enim neque molestiae quaerat reprehenderit. Cum, mollitia quam.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h1>Card3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quisquam. Rem obcaecati dolorem maxime. Rem maiores repellat ducimus! Sint culpa animi doloribus a, tenetur sit ipsa quas necessitatibus! Magni veritatis iusto quae aut blanditiis.</p>
+        </div>
+    </div>
+</body>
+</html>

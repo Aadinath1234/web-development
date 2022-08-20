@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility & z-index</title>
+    <style>
+        .box{
+            width:170px;
+            height:170px;
+            border: 2px solid black;
+
+        }
+
+        #box1{
+            position: relative;
+            top: 49px;
+            z-index: 35;
+            background-color: green;
+        }
+
+        #box2{
+            /* default value of the visibility 
+              is visible. */
+             /* visibility: visible; */
+
+
+            /* visibility: hidden;
+              by using visibility: hidden ,it is used to 
+                 hide that element but the place of that element
+                   is reserved. if you use display: none; then  that reserved place
+                    will also lost */
+
+                  
+
+
+                 /*   visibility: hidden;
+                    display:none;
+                    
+                    so here the element would be
+                      hidden and that it's  reserved space will
+                         also lost.*/
+                    position: relative;
+                    top: 14px;
+                    z-index: -1;
+                    background-color: red;
+        }
+
+        #box3{
+            background-color: blue;
+        }
+
+        #box4{
+            background-color: yellow;
+        }
+
+     /*z - index: used to toggle position of the boxes
+          like if green box becomes more   in size of
+             red box then you want to increase red box
+               size for that work we use z-index.
+                z-index do not work on position: static.
+                 it only works for position element , position
+                   should be other than static. 
+                   in simple words , when  you want
+                   that green box should be less in size 
+                    with respect to red box that purpose we use
+                     z-index.*/
+                     
+
+        
+    </style>
+</head>
+<body>
+    <!-- here $ symbol is used for numbering 1,2,3,4 etc. -->
+       <!-- here we have used emmet key div.box#box$*4 , the results is this:   -->
+       <div class="box" id="box1"></div>
+       <div class="box" id="box2"></div>
+       <div class="box" id="box3"></div>
+       <div class="box" id="box4"></div>
+      
+
+
+
+</body>
+</html>

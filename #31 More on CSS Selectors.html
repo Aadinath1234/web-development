@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+
+</head>
+<style>
+h1{
+    background-color: red;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+  div p{
+    color: yellow;
+    background-color: green;
+    font-weight: bold;
+  }
+/* this div p would be applied for all the paragraphs
+    inside div at any dept paragraph is 
+      present that would be get affected by the properties. */
+
+
+div li p{
+    color:red;
+
+}
+/* this will affect only to paragraph that is 
+  only inside the li ,not to all the paragraphs. */
+
+
+ /*div>p{
+    color:rgb(141, 210, 12);
+}
+ this is for, when paragraph is direct child of div 
+   then this property will be applied.
+    otherwise block will not get affected.
+    here this is a paragraph
+      and this is another paragraph will get affected by this 
+      properties. */
+
+
+      div + p{
+        color:white;
+        background-color: bisque;
+      }
+      /* when paragraph's previous sibling is 
+        div then this property would be applied.
+         here this is another paragraph and this is outermost
+           paragraph will get affected.
+           #previous sibling:
+               # for , this is outermost paragraph previous sibling
+                 is div class="container"
+                 while for, this is  another paragraph 
+                   previous sibling is div class="row" */
+</style>
+<body>
+  <h1>This is more on selectors</h1> 
+  <div class="container">
+    <div class="row">
+        <ul>
+            <li class="item"><p>this is another paragraph inside li</p></li>
+             <li>This will not get affected.</li>
+        </ul>
+        <p>This is a paragraph</p>
+    </div>
+    <p>This is another paragraph</p>
+
+  </div>
+  <p>This is outermost paragraph. </p>
+</body>
+</html>

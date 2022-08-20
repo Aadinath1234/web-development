@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning , absolute and many more</title>
+  <style>
+    /* CSS Positions are : static(by default.) ,absolute,relative, fixed, sticky.  */
+    .box{
+         display: inline-block; /* on selecting inline the block on text was very small in size.*/
+        border: 2px solid red;
+        width: 150px;
+        height: 150px;
+        margin: 2px;
+    }
+
+    #box3{
+       /* position:absolute;
+         on using absolute position here box3
+           and box4 got overlap on each other. */
+       
+       
+       
+       
+           /*  position: relative;
+        top: 34px; here  box is moving down from its position or we can from the top.
+        left: 34px;  box will move from left and overlap box4.  
+        relative means changes will be occur with respect to its original 
+            position.
+            when you need changes on its original position then
+            use relative. */ 
+
+
+
+
+         /*
+         position: absolute; 
+           top: 134px;
+           left: 134px;
+            in the absolute position  shift
+            will occur with respect to its parent box
+             here the parent is container . we can 
+                changes will be w.r.t its parent, now in this 
+                   box parent is a container.  */
+               
+                        
+           /* position: fixed;
+            right: 4px;
+             so when we use fixed position then
+               that block will be fixed at one position
+                 and after scrolling down or up, that 
+                 box will move with scrolling , it is just fixed
+                   and constant.here we have used right so the box3 
+                   had fixed to right side of the box and is constant at
+                    that place.
+                    
+                    
+            position: fixed;
+            right: 4px;
+            bottom: 4px;
+            using bottom the box will go 
+             to the bottom and remain 
+             constant while scrolling.later written 
+             value overwrite previous.*/
+
+           position:sticky;
+           top:  3px;
+             /*in the sticky, that block got sticked to the top
+               it is also constant at one place but in it , 
+                after going to its original position it is looks
+                like that that box has just left its place 
+                 now it's place is empty and it is moving downwards
+                  but in reality it is sticked to top and constant.   */
+    
+        } 
+        
+    .container{
+        border: 2px solid black;
+        background-color: khaki;
+        height: 1000px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+    <div class="container">
+    <!-- shift + alt used to choose multiple line at one time. -->
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+</div>
+</body>
+</html>

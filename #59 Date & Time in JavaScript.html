@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dates</title>
+    <style>
+        .container{
+            font-size: 23px;
+            background-color:blanchedalmond;
+            border: 2px solid grey;
+            padding: 34px;
+            margin: 4px;
+            text-align: center;
+
+
+        }
+
+        #time{
+            font-weight: bold;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    This is a container.
+    Current time is <span id="time"></span>
+  </div>  
+  <script>
+    console.log("this is date and time tutorial");
+    //output: this is date and time tutorial.
+    let now = new Date();
+    console.log(now);
+    // output: Sun Aug 07 2022 22:29:32 GMT+0530 (India Standard Time).
+    let dt = new Date(0);
+    console.log(dt);
+    //output: Thu Jan 01 1970 05:30:00 GMT+0530 (India Standard Time), this is the reference time.
+    let dt1 = new Date(1000);
+    console.log(dt1);
+    // output: Thu Jan 01 1970 05:30:01 GMT+0530 (India Standard Time), here 1000 is for 1 second.
+
+
+    let newDate = new Date("2029-09-30");
+    console.log(newDate);//output: Sun Sep 30 2029 05:30:00 GMT+0530 (India Standard Time)
+
+    // another way to show date
+    //let newDate = new Date(year, month, date,hours, minutes, seconds, milliseconds);
+    let newDate1 = new Date(3020, 4, 6, 9, 3, 2,34);
+    console.log(newDate1);
+    // output: Sat May 06 3020 09:03:02 GMT+0530 (India Standard Time)
+
+
+    // to get an year :
+    let yr = newDate1.getFullYear();
+    console.log("this is year ", yr);
+    //output: this is year 3020.
+
+
+    // to get date:
+    let dat = newDate1.getDate();
+    console.log("this is date ", dt);
+    //output: this is date  Thu Jan 01 1970 05:30:00 GMT+0530 (India Standard Time)
+
+
+    // to get month:
+    let month = newDate1.getMonth();
+    console.log("the month is", month);
+    //output: the month is 4.
+
+    // to get hours:
+    let hours = newDate1.getHours();
+    console.log("The hours is ", hours);
+    //output: The hours is  9.
+
+
+    // to change the date :
+    newDate1.setDate(15);
+    console.log(newDate1);
+    //output: Mon May 15 3020 09:03:02 GMT+0530 (India Standard Time)
+
+    newDate1.setDate(32);
+    console.log(newDate1);
+    //output: Thu Jun 01 3020 09:03:02 GMT+0530 (India Standard Time), the days in a month is 30 or 31 so 32 changes to 1 of next month automatically.
+     
+    newDate1.setDate(39);
+    console.log(newDate1);
+    // Sun Jul 09 3020 09:03:02 GMT+0530 (India Standard Time)
+
+    // by doing Date.now() you will get miliseconds passed till now from the date 1970.
+     //Date.now()
+1659893895911
+// Date.now()
+1659893915549
+
+    newDate1.setMinutes(30);
+    console.log(newDate1);
+    //output: Sun Jul 09 3020 09:30:02 GMT+0530 (India Standard Time)
+
+    // you can prefer other methods of set like set for minutes , seconds, miliseconds.
+
+    // to show time on the page.
+  setInterval(updateTime, 1000);
+
+  function updateTime(){
+    time.innerHTML = new Date();
+  }
+
+
+      
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+  <div class="container">
+    This is arrow functions tutorial.
+  </div> 
+  <script>
+    //general way to write function:
+
+    /*
+    function greet(){
+        console.log('Good morning');
+    }
+    greet();//output: Good morning.
+
+    */  
+
+
+   /*
+     //short way to write the function:(Arrow Function):  
+         greet = ()=> {
+            console.log("Good morning bhai");
+         }
+         greet();
+         // => is called the arrow function.
+
+         //output: Good morning bhai
+
+         */ 
+
+
+/*
+         let greet = ()=> {
+            console.log('Good morning');
+         }
+         let sum = (a,b)=>{
+            return a+b;
+         };
+
+         greet();
+         setTimeout(() => {
+            console.log("we are inside settimeout");
+         }, 3000);// inside settimeout we have arrow function and after 3 seconds your function will run.
+          // after calling sum(valuefor a, valuefor b) , it will sum the objects like: sum(3,5) in output you will get 8.
+
+
+*/ 
+
+
+
+
+let greet = ()=> {
+            console.log('Good morning');
+         }
+
+         //shortest way to write function:
+         let sum2 = (a,b)=> a+b;
+         // here you don't have to write return function .
+         greet();
+         let half = a=> a/2;
+         // here you don't have to write the parenthesis for a , and this is only applicable for single arguments. , the output will be half(40): 20.
+
+         // when you do not have any arguments then do this:
+         let y = ()=> console.log("good happening.");
+         //output: after calling this y(), you will get good happening in the output.
+         setTimeout(() => {
+            console.log("We are inside settimeout");
+         }, 1000); 
+         // output: sum2(2,3) = 5.
+
+
+
+
+
+
+
+
+
+
+/*
+
+         let obj1 ={
+            names: ["Harry","Rohan","SkillF", "DjKhiladi"],
+            speak(){
+                this.names.forEach((student)=>{
+                    console.log("kukdoo koo" + student);
+                });
+            }
+         }
+         obj1.speak();
+        //output: Good morning
+                  kukdoo kooHarry
+                  kukdoo kooRohan
+                  kukdoo kooSkillF
+                  kukdoo kooDjKhiladi
+                  We are inside settimeout
+
+*/ 
+
+
+/*
+let obj1 ={
+            greeting: "good morn",
+            names: ["Harry","Rohan","SkillF", "DjKhiladi"],
+            speak(){
+                this.names.forEach((student)=>{
+                    console.log(this.greeting + "kukdoo koo" + student);
+                });
+                //here which is this is present inside the console.log(),  that will point to that this which is out of the function.
+             
+            }
+         }
+         obj1.speak();
+
+         output: 
+                   Good morning
+                  good mornkukdoo kooHarry
+                  good mornkukdoo kooRohan
+                  good mornkukdoo kooSkillF
+                  good mornkukdoo kooDjKhiladi
+                 We are inside settimeout
+              
+
+*/
+
+
+
+let obj1 ={
+            greeting: "good morn",
+            names: ["Harry","Rohan","SkillF", "DjKhiladi"],
+            speak(){
+                //after removing arrow function and using function keyword
+                // here the function do not point the this out of the function it will point to this which is inside the function.
+                // # lexical this.
+                // if you are using arrow function then it points to parent this / global this not the this which is inside the function.
+                // when you are not using arrow function and using the default function keyword that points to this , which is local and inside the funtion , not to the parent this.
+
+                this.names.forEach(function(student){
+                    console.log(this.greeting + "kukdoo koo" + student);
+                });
+                //here which is this is present inside the console.log(),  that will point to that this which is out of the function.
+             
+            }
+
+        }
+obj1.speak();
+
+       /* output: 
+       Good morning.
+        undefinedkukdoo kooHarry
+        // this undefined is for this inside the function is nothing so it prints undefined for it.
+ undefinedkukdoo kooRohan
+ undefinedkukdoo kooSkillF
+ undefinedkukdoo kooDjKhiladi
+We are inside settimeout
+
+*/  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+  </script> 
+</body>
+</html>

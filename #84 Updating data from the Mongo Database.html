@@ -1,0 +1,16 @@
+<!-- 
+    # CRUD : create read update and delete.
+       # show dbs
+       # use harryKart
+       # show collections
+       # db.items.find
+
+    # when you want to update one item at one time then use:
+    db.items.updateOne({name:"Moto 30s"}, {$set:{price: 2}})
+      here first is filter object which will select which item got updated now that item is 
+         name:"Moto 30s",  second is what do you want to set the value  here that is $set: price:2
+     # when you  want to update many items at one time then use :
+      db.items.updateMany({name: "Moto 30s"}, {$set: {price:3, rating:1}})
+      by doing this all the moto 30s , price and rating will be seted to 3 and 1 at one time .
+      
+ -->

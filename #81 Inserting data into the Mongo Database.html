@@ -1,0 +1,20 @@
+<!-- 
+    # inserting data in mongo
+         #command: use harryKart
+            by this harryKart we have created database.
+  //  inserting items in database.by using db we are getting database harryKart.
+     and using the function insertOne()
+     query:
+     db.items.insertOne({name:"Samsung 30s", price:22000, rating:4.5, qty:233, sold: 98})
+     #here the items is the collection which is rdbms is table.
+     #when you have to insert multiple items then use this query:
+     db.items.insertMany([{name:"Samsung 30s", price:22000, rating:4.5, qty:233, sold: 98},{name:"Moto 30s", price:29000, rating:3.5, qty:133, sold: 598},{name:"Realme 80s", price:129000, rating:2.5, qty:633, sold: 98}])
+     # to see the data in the documents the use this query:
+        db.items .find()
+      # out data which we querying and creating manipulation is stored inside the data folder which 
+        we have created inside local C .
+      #mongodb do not follow same column same format if all are following a particular no . of rows so you
+         can increase or decrease rows and columns in your database while using mongodb.
+          db.items.insertMany([{name:"Samsung 30s", price: 22000, rating: 4.5, qty:233, sold:98},{name:"Moto 30s", price:29000,rating:3.5, qty:133, sold:598},{name:"Realme 80s", price:129000, rating:2.5, qty:633, sold: 98,isBig: true}])
+     # 
+ -->

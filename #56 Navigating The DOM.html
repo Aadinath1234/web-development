@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+   <div id="main" class="container">
+    <!-- div#main.container -->
+    <!-- ul>li*5 -->
+    <ul id="nav">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>More About Us</li>
+        <li>Contact Us</li>
+    </ul>
+   </div> 
+   <div class="container">
+     Another container
+   </div>
+   <script>
+    
+   let main = document.getElementById('main');
+    console.log(main);
+    /* you can access html code which is now inside the body section can be access by using this javascript code this output can be seen in your console. */
+     let nav = document.getElementById('nav');
+     console.log(nav);
+     // by using this you can access nav element and in the console after writing nav.innerHTML you will get all the element in the output like this: <li>Home</li>\n        <li>About</li>\n        <li>Services</li>\n        <li>More About Us</li>\n        <li>Contact Us</li>\n .
+     
+     
+     /* you can also manipulate the element in DOM by js like this:
+     nav.innerHTML = "<li> Dynamic Element </li>"
+     and then you will get only one element in the output which is Dynamic element.
+     */ 
+    
+     
+  // to access the elements by using containers 
+  let containers = document.getElementsByClassName('container');
+  console.log(containers);
+  /*output:HTMLCollection(2) [div#main.container, div.container, main: div#main.container]0: div#main.container1: div.containermain: div#main.containerlength: 2[[Prototype]]: HTMLCollection
+   it is containing two containers first is zero and 
+    second is one 
+    you can access both if you want to access zeroth
+    then type containers[0] here you will get your first container
+    if you type containers[1] then you will get second container .
+    */ 
+
+
+
+
+
+    // we can also use css selectors to select the elements.
+   /* let sel = document.querySelector('.container');
+    console.log("Selector returns", sel); */
+    // output: Selector returns div#main.container, it has selected first container.
+      /* let sel = document.querySelector('#nav');
+    console.log("Selector returns", sel);
+output: this will show nav id and elements .
+      */
+
+      /*
+      let sel = document.querySelector('#nav>li');
+       console.log("Selector returns", sel);
+       //output: this will show first li element which is home inside the nav id.
+
+       */ 
+
+       let sel = document.querySelectorAll('#nav>li');
+       console.log("Selector returns", sel);
+       //output: Selector returns NodeList(5) [li, li, li, li, li].this will show all the elements.
+
+       /*to change the content of li , you can also use: sel[0].innerHTML = "inserted", then where sel0 is home that will change to inserted.and the latest updated query's output will be shown on the screen.
+       */  
+
+
+
+       
+       
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+   </script>
+</body>
+</html>

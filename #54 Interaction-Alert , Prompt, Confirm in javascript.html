@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction using alert, confirm and prompt </title>
+</head>
+<body>
+   <div class="container">
+     This is a page.
+   </div> 
+
+   <script>
+    /*
+      //Alert in in-browser JavaScript.
+      alert("This is a message");
+      // when you run this then as an alert in the page this message will be shown as an modale.
+      //without closing modale you cannot do anything with pages.
+    //   return value of the alert is undefined.
+
+    */
+
+
+    //when you want to show prompt :
+         let name = prompt("what is your name?", "Guest");
+    //    prompt(message?: string, _default?: string): string
+    // here first we write the message and after that we will write default.
+     console.log(name);// whatever you will enter in inbox that will get printed in the output.
+    let name1 = prompt("what is your name?", "");
+    console.log(name1); // atleast in place of default keep spacing , so that all browsers should support your program.
+
+
+
+    // when you have to give warning to user then you use confirm:
+       /* let deletePost = confirm("Do you really want to delete this post?");
+        console.log(deletePost);//if you click on  ok then it shows true  and if you click on cancel then it shows false.*/
+
+
+        let deletePost = confirm("Do you really want to delete this post?");
+        //console.log(deletePost); // to delete the post and so the output.
+        if(deletePost){
+            //Code to delete the post
+            console.log("Your post has been deleted successfully");
+        }
+        else{
+            //Code to cancel deletion of the post
+            console.log("Your post has not been deleted. ");
+        }
+        // if you choose ok then if code executed and if you select cancel then else code will get executed.
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+</body>
+</html>

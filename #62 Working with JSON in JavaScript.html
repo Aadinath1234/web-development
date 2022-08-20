@@ -1,0 +1,55 @@
+<!-- json is used for data transmission in javascript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial</title>
+
+</head>
+<body>
+    <div class="container">
+        This is my container.
+    </div>
+    <script>
+        let jsonObj = {
+            name: "Harry",
+            channel: "CWH",
+            friend: "Rohan Das",
+            food: "Bhindi"
+        } //#bhindiLoverSquad.
+        console.log(jsonObj);// jsonObj,this is an object.
+        // to convert an object to a string.
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);
+        //output: {"name":"Harry","channel":"CWH","friend":"Rohan Das","food":"Bhindi"}, this is a string.
+        //after converting in a string , you can apply all method of string inside and can create changes to it.
+        // when you want to change the value ,in the string then use replace .
+         myJsonStr = myJsonStr.replace('Harry', 'Larry');
+         console.log(myJsonStr);
+        //  output:{"name":"Larry","channel":"CWH","friend":"Rohan Das","food":"Bhindi"}
+        
+        
+
+
+
+
+        // convert a string to an object.
+        newJsonObj = JSON.parse(myJsonStr);
+        console.log(newJsonObj);
+        //output: {name: 'Larry', channel: 'CWH', friend: 'Rohan Das', food: 'Bhindi'}, now this is an object.
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

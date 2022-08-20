@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom Properties</title>
+    <style>
+         /* when you are declaring variable 
+           then use -- in front of the variable.
+           like : --boxcolor: blue;
+           blue is the value of the color.
+           when you are using this variable then
+             you have to use the word var in front of
+             variable name like this: var(--boxcolor);
+             */
+
+             :root{
+                      /* --box-color: violet; */
+                      --primary-color: blue;
+                      --danger-color:red;
+                      --maxw: 333px;
+                   }
+
+
+       .box{
+        /* --box-color: blue; */
+        width: 200px;
+        height: 200px;
+        /* background-color: blue; */
+        background-color:var(--primary-color);
+        border: 2px solid var(--danger-color);
+        margin: 2px 9px;
+        box-shadow: 3px 3px var(--box-color);
+        /* while using variable then changing value
+           at one place you can create changes at many places at one 
+             time. when you are defining variable in one class
+               and applying that variable in another class 
+                 would not work . then it works as local variable.
+                 if you want that the variable should work like global variable
+                  then you have to use that variable 
+                   inside the root block like this: ; 
+                   :root{
+                      --box-color: violet;
+                   }
+                   */
+
+
+       }
+
+       .container{
+        max-width: var(--maxw);
+        margin:auto;
+        background-color: var(--danger-color);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: var(--box-color); */
+
+
+       }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        </div>
+    </div>
+</body>
+</html>

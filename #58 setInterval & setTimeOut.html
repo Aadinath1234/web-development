@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript SetTimeOut and ClearTimeout.</title>
+       
+</head>
+<body>
+   <div class="container">
+    // This is a container.
+    time now is <span id="time">
+
+    </span>
+   </div> 
+
+   <script>
+    console.log("This is tutorial 58");
+    // setTimeout --> Allows us to run the function once after the interval of time.
+    // clearTimeout --> Allows us to run the function repeatedly after the interval of time.
+/*
+    function greet(){
+        console.log("Hello Good Morning");
+    }
+
+    greet(); //output: Hello Good Morning
+
+    setTimeout(greet, 3000);// here greet is the name of the function and 3000 is 3 seconds.
+    // setTimeout is also a function.using this function the output will be shown after 3 seconds.
+
+ */ 
+
+
+
+ 
+ /*
+ function greet(name){
+        console.log("Hello Good Morning" + name);
+    }
+    setTimeout(greet,5000,"harry");
+    // name is the parameter in the greet.
+    // harry is the value for name.
+    //output: Hello Good Morningharry , and this output get printed after 5 seconds.
+    // you can pass multiple arguments to the setTimeout.
+
+*/ 
+
+
+
+/*
+function greet(name,byeText){
+        console.log("Hello Good Morning" + name + " "+ byeText);
+    }
+    setTimeout(greet,5000,"harry","Take Care");
+    //output: Hello Good Morningharry Take Care.
+   setTimeout(greet(), 12000); , here the output is 'hello good morning undefined undefined.
+    because with greet we have used parenthesis.
+    you have to just write the name of the function.
+    */
+
+
+
+/*
+    function greet(name,byeText){
+        console.log("Hello Good Morning" + name + " "+ byeText);
+    }
+   timeOut =  setTimeout(greet,2000,"harry","Take Care");
+   console.log(timeOut);/*output: 1
+                 Hello Good Morningharry Take Care, here the 1 is the unique id of settimeout. 
+   clearTimeout(timeOut);// when you want to clear or remove your timeout call which you have set before.*/
+                   
+
+   // setInterval: this is for , after  how many times you want to print the output of the function continuosly.
+    /* function greet(name,byeText){
+        console.log("Hello Good Morning" + name + " "+ byeText);
+    }
+   setInterval(greet, 1000, "harry", "Good night");
+  here greet is the name of the function , 1000 is the interval time after
+     that code will be executed . harry is a value of name and Good night is the 
+       value for byeText.
+       output: Hello Good Morning harry  Good night. and this statement is
+         continuously printing in the console.the number is showing on the console how many 
+          times it got printed. */
+
+
+
+
+
+          /*
+          function greet(name,byeText){
+        console.log("Hello Good Morning" + name + " "+ byeText);
+    }
+        intervalId = setInterval(greet, 1000, "harry", "Good night");
+         clearInterval(intervalId); // this will clear the repeatation of code after a interval of time.
+
+*/ 
+
+// to show the time with the help of js.
+function displayTime(){
+    time = new Date();
+    console.log(time);
+    document.getElementById('time').innerHTML = time;
+}
+setInterval(displayTime, 1000);// display time in every 1 second.
+//output: time is showing on the page and console and it is keep updating itself after every second.
+
+
+
+         
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+   </script>
+</body>
+</html>

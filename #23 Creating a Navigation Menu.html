@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+       .navbar{
+        background-color: black;
+        border-radius: 30px;
+       }
+/*  background-color is not shown because when we float
+     something then it is overflow from it's parent.so for that
+       cause we will use this:   */
+       .navbar ul{
+         overflow: auto;
+       }  /* after doing this color of the background is shown. */
+       .navbar li{
+        float:left;
+         list-style: none;
+         /* list-style none we have used to remove the bullets
+            from its place. */
+       margin: 13px 20px;
+    }
+
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none; 
+            /* after using text-decoration underline was removed. */
+             color:white;
+        }
+
+         /* .navbar li a:hover{
+            background-color: rgb(26, 207, 162);
+        }
+       when someone hover on this navbar the color  of the boxes will become this. */
+
+       .navbar li a:hover{
+            color: rgb(26, 207, 162);
+         }/* after doing this only the text color will 
+           change when you hover on it. not the box of that text.*/
+
+        .search{
+            float:right;
+            color: white;
+            padding: 12px 75px;
+
+        }
+
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px;
+            width: 129px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- nav is for navigation. -->
+            <ul>
+                <!-- here we are taking home about and services to 
+                   anchor tag because then we can open links on clicking
+                   on it. -->
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <!-- after  giving href to anchor tag
+                      content becomes blue colored and underline.
+                      to remove this underline we will use 
+                       text-decoration: none; so then the
+                        underline will be removed from its place. -->
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website">
+                <!-- by using placeholder we can show that text on the search bar like:
+                     search this website. -->
+
+                </div>
+                
+            </ul>
+
+        </nav>
+    </header>
+</body>
+</html>

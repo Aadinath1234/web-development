@@ -1,0 +1,2 @@
+the name of the client is aadinath, 21 years old, male,  residing at kanti bandi. More about him/her: honest person. 
+# after reloading page we got automatically output.txt , all the requested information is written inside it.

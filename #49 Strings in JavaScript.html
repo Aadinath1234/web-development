@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Strings and String Methods.</title>
+
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+
+        </div>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat ratione velit qui rerum dolore voluptates, quidem eius dolor voluptatum vel, deleniti animi facilis omnis inventore nemo architecto minima non sint officiis incidunt explicabo?</p>
+    </div>
+
+    <script>
+       var string = "this";
+        console.log(string); //output: this.
+        /* var string = 'thi"s';
+        console.log(string); //output: thi"s . */
+       /* var string = 'thi's';
+        console.log(string); //output: showing error , unexpected identifier.*/
+
+
+          var string = "thi's";
+          var name = 'Harry';
+          var message = 'Harry is a good boy';
+          console.log(string + name + message);//output: thi'sHarryHarry is a good boy
+
+          // when you have to use single and double both quotes then use backsticks ` ` and inside the temp with variable name we use curly brackets and $ dollar symbol.
+          var string = "thi's";
+          var name = 'Harry';
+          var channel = 'CodeWithHarry';
+          var message = 'Harry is a good boy';
+          var temp = `${name} is a 'nice' person "and" he has a channel called
+           ${channel}`;
+           console.log(temp);//output: Harry is a 'nice' person "and" he has a channel called CodeWithHarry.
+
+           var len= name.length;
+           console.log(`Length of name is ${len}`);
+           // here name is the variable.
+           //output: Length of name is 5.
+
+           /* for the new line you will \n which is escape sequence character
+            \t is for tab and \b is for backspace.
+             when you have to put one backslash in your line then took \\ two backslash in printing statement.*/
+           console.log("hello yash\n manish");
+           /*output: hello yash
+                      manish.
+                      */
+        console.log("hello yash\n manish\t and \b");
+        console.log("\\hello yash\n manish");//output: \hello yash manish.
+
+        
+
+
+        //create a string using string constructor.
+        var y = new String("wow!!!");
+        console.log(y);//output:String {'wow!!!'}.
+        // this method to create a string is not recommended. use normal way to create string. 
+
+        
+
+
+        //by this way you will insert string in the document.
+        document.getElementById('content').innerHTML='<h3>This is  an h3 heading and we have added this text dynamically using javascript.</h3>'
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

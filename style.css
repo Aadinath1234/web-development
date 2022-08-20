@@ -1,0 +1,300 @@
+/* CSS Reset */
+/* here we are using this css in #39 file. */
+*{
+    margin:0;
+    padding:0;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+ /* css Variables */
+ :root{
+    --navbar-height: 100px;
+
+ }
+
+ /* Navigation Bar */
+
+
+ #navbar::before{
+   content: "";
+   background-color: black;
+   position: absolute;
+   top: 0px;
+   left:0px;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+   opacity: 0.4;
+
+
+ }
+
+
+ /* Navigation Bar: Logo and Image */
+ #logo{
+    margin: 19px 45px;
+
+ }
+
+ #logo img{
+    
+    height: 96px;
+    margin: 0px 7px;
+    border-radius: 23px;
+}
+
+ /* Navigation Bar: List Styling */
+#navbar{
+  display: flex;
+  position: sticky;
+  align-items: center;
+  top: 0px;
+
+  
+
+}
+
+ #navbar ul{
+   display: flex;
+   font-family: 'Dancing Script', cursive;
+ }
+
+ 
+ #navbar ul li{
+   /* color: white; */
+   list-style: none;
+   /* using list style none , 
+      dots from li will gone. */
+   font-size: 1.3rem;
+
+ }
+
+ 
+ #navbar ul li a{
+   color: white;
+  display:block;
+  padding: 45px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  /* underline will be gone from the text. */
+
+
+   
+ }
+
+ #navbar ul li a:hover{
+   color: black;
+   background-color: white;
+   opacity: 0.79;
+ }
+
+  
+ /* Home Section */
+ #home{
+   display: flex;
+   flex-direction: column;
+   padding: 3px 200px;
+   height:520px;
+   justify-content: center;
+   align-items: center;
+
+
+
+ }
+
+ #home::before{
+   content: "";
+   background: url('bg1.jpg.jpg') no-repeat center center/cover;
+   position: absolute;
+   height: 642px;
+   top:0px;
+   left:0px;
+   width: 100%;
+   z-index: -1;
+   opacity: 0.79;
+
+
+ }
+
+ #home h1{
+   color: white;
+   text-align: center;
+ }
+#home p{
+   color:#18171f;
+   text-align: center;
+   font-size: 1.5rem;
+   font-family: 'Dancing Script', cursive;
+}
+ 
+/* Services Section */
+#services{
+  margin: 34px;
+  display: flex;
+}
+#services .box{
+  border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 6px;
+    border-radius: 78px;
+    background-color: #f4e5e5;
+    margin-bottom:20px;
+}
+
+
+
+#services .box img{
+  
+  display: block;
+    height: 160px;
+    margin: auto;
+    /* margin auto will work when you
+    choose display : block. */
+}
+
+#services .box p{
+  font-family: 'Dancing Script', cursive;
+
+
+}
+
+
+
+
+
+
+/* Clients Section */
+#client-section{
+  position: relative;
+
+
+}
+
+#client-section::before{
+content: "";
+position:absolute;
+background: url('bg.jpg.png');
+width:100%;
+height: 100%;
+z-index: -1;
+opacity: 0.4;
+
+}
+
+
+
+#clients{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#client-item{
+  padding: 34px;
+}
+
+#clients img{
+  height: 124px;
+}
+ 
+/* Contact Section */
+#contact{
+  position:relative;
+
+}
+
+#contact::before{
+  content:"";
+  position: absolute;
+  width:100%;
+  height:100%;
+  z-index: -1;
+  opacity: 0.3;
+  background: url('contact1.jpg.jpg') no-repeat center center/cover;
+}
+
+
+#contact-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius:9px;
+    font-size: 1.1rem;
+    
+
+}
+
+#contact-box form{
+  width: 40%;
+
+}
+
+
+#contact-box label{
+ font-size: 1.3rem;
+ font-family: 'Dancing Script', cursive;
+
+ 
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  background:black;
+  color: white;
+  padding: 9px 20px;
+}
+/* Utility classes */
+.h-primary{
+  font-family: 'Dancing Script', cursive;
+   font-size: 2.8rem;
+   padding: 9px;
+
+}
+
+.h-secondary{
+  font-family: 'Dancing Script', cursive;
+  font-size:2.3rem;
+  padding: 12px;
+}
+
+.btn{
+  padding: 6px 20px;
+  border: 2px   solid white;
+  background-color: brown;
+  color: white;
+  margin: 17px;
+  font-size:1.5rem;
+  border-radius: 10px;
+  cursor:pointer;
+
+
+
+}
+
+.center{
+  text-align: center;
+}

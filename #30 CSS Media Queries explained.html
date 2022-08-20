@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries </title>
+    <style>
+        .box{
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+            /* after doing display none 
+             all the content of the page will 
+              be vanished. */
+        }
+
+          /* @media (max-width: 500px) */
+          @media only screen and (max-width: 300px){
+            #box-1{
+              display: block;
+              background-color: cyan;
+            }
+        
+            /* here we are giving the condition 
+              that if from 0 to 300px width is found
+                then this properties should apply to
+                  the box or content. */
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 500px){
+            #box-2{
+              display: block;
+              background-color: blueviolet;
+            }
+        }
+        /* here from width 300 to 500px this properties would be
+            applied. */
+
+            /* here we have used media type only screen,
+              there are many values  of media types
+                so we are not recognizing it.
+                we are only supporting only screen.
+                 */
+
+
+        @media only screen and (min-width: 500px) and (max-width: 800px){
+            #box-3{
+              display: block;
+              background-color: rgb(244, 244, 18);
+            }
+        }
+        /* here from 500 to 800px width, this properties 
+            would be applied. */
+          
+
+
+            @media only screen and  (min-width: 800px){
+            #box-4{
+              display: block;
+              background-color:green;
+            }
+            /* this properties would be applied 
+                when the width of page will become
+                  800px.  */
+        }
+
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <!-- # media query: 
+               media query is a technic when 
+               screen width become  this then you have
+             to add some specific css in the code.  
+             media query is like if conditional statement , which conditions are 
+              true that will be get executed.    -->
+
+
+             <div class="box" id="box-1">Mai ek iPhone hoon</div>
+             <div class="box" id="box-2">Mai ek Tablet hoon</div>
+             <div class="box" id="box-3">Mai ek computer hoon</div>
+             <div class="box" id="box-4">Mai ek widescreen computer hoon</div>
+
+</body>
+</html>

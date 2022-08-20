@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> This is HTML forms tutorial </h2>
+    <form action="backend.php">
+        <label for="name">Name</label>
+        <!-- for is for the taking the name of id , which indicates that , that that label belongs to that input tag. -->
+        <div><input type="text" name="myName" id="name">
+            <div>Name:<input type="text" name="myName" id="name">
+                <!-- here the div takes block while the input is inline take only lines.with the help of div we can create a  separate block. -->
+            </div>
+            <!-- in place of br tag we can use div to separate block as per suggestion. -->
+            <!-- you can use here br tag but not recommended. to seperate block --><br>
+            <br>
+            <div>Role: <input type="text" name="myRole">
+            </div>
+            <br>
+            <div>
+                Email:<input type="email" name="myEmail" <!-- here the name is for backend to identify this email tag.
+                    -->
+            </div>
+            <br>
+            <div>
+                Date: <input type="date" name="myDate">
+            </div>
+            <br>
+            <div>
+                Bonus: <input type="number" name="myBonus">
+            </div>
+            <!-- you can use e to give the power to the number. -->
+            <br>
+            <div>
+                Are you eligible?: <input type="checkbox" name="myEligibility">
+            </div>
+            <br>
+            <div>
+                <!-- when you want to the checkbox is by default be ticked then use checked in input. -->
+                Are you eligible?: <input type="checkbox" name="myEligibility" checked>
+            </div>
+            <br>
+            <div>
+                Gender: Male <input type="radio" name="myGender"> FeMale <input type="radio" name="myGender">
+                Other <input type="radio" name="myGender">
+            </div>
+
+            <br>
+            <div>
+                <label for="car">Car</label>
+                <select name="myCar" id="car">
+                    <!-- if you want that one of those option would be got selected by default then use selected inside the tag like this:   -->
+                    <option value="ind">Indica </option>
+                    <option value="swft" selected>Swift</option>
+                </select>
+
+            </div>
+            <br>
+
+
+
+            <div>
+                <input type="submit" value="Submit Now">
+                <input type="Reset" value="Reset Now">
+            </div>
+
+            <!-- by using alt+down arrow key can shift your content to the downside where you want. -->
+
+
+    </form>
+    <!-- here the data filled in the form will be submitted to the backend . -->
+
+</body>
+
+</html>

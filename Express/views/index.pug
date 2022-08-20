@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Using plain html in Pug</title> -->
+    <!-- given below pug , click on it and then select html and you will get your
+        boiler plate. -->
+
+        <title>#{title}</title>
+
+
+    <!-- when you want to include the css file in this file using style tag  , indentation should taken care off 
+        at the time of including you have to give the full path of the file.  here in full path we have come out of views directory 
+        then it went to static and inside the static it got the style.css file  , here we are adding html to pug. :  -->
+    style 
+        include ../static/style.css
+
+
+</head>
+<body>
+
+    
+<nav>
+    <ul>
+        <li><a href = "/">Home</a></li>
+        <li><a href = "/">About</a></li>
+        <li><a href = "/">Contact Us</a></li>
+    </ul>
+</nav>
+    <div class="container">
+    <!-- <h1>This is heading</h1> -->
+
+<!--  
+<p>  
+    |  when you want to add plain text to templates use pipe |  -->
+    | <!-- This is a plain html using pug. -->
+    <!-- | #{content} -->
+</p>
+<!-- by commenting this paragraph text we are adding here form tag. -->
+
+<h2>Get this gym membership for 60$ -Hurry fill this form now. </h2>
+
+<form action="/" method="post" id="contact">
+    <input type="text" name="name" id="name" placeholder="Enter your name">
+    <input type="text" name="age" id="age" placeholder="Enter your age">
+    <input type="text" name="gender" id="gender" placeholder="Enter your gender">
+    <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter your address"></textarea>
+    <textarea name="more" id="more" cols="30" rows="10" placeholder="More about you..."></textarea>
+    <button class="btn">submit</button>
+
+</form>
+</div>
+
+
+</body>
+</html>

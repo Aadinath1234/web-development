@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Tutorial</title>
+    <style>
+        .container{
+            display: grid;
+              /* grid-template-columns: 300px 100px 100px;
+          here we create three columns
+               width of the first column is 300px
+                 width of the second column is 100px
+                   width of the third column is 100px. */
+
+          /*    grid-template-columns: 300px 100px auto;
+                   width of the first column is 300px
+                 width of the second column is 100px
+                   width of the third column is auto. */
+
+
+
+                   /* grid-template-columns: 300px auto 100px;
+                    width of the first column is 300px
+                 width of the second column is auto
+                   width of the third column is 100px.
+                   here the third column will go to the corner 
+                     of the rightside of the page. */
+
+
+                    /*  grid-template-columns:1fr 4fr 1fr;
+                     1fr is for 1 part is for 1st column.
+                         4fr is for 4 part is for 2nd column.
+                           1fr is for 1 part is for 3rd column.
+                           here we are talking about the width. */
+
+                         /*  grid-template-columns:repeat(10, auto);
+                           when you have to give grid-template-columns
+                           to 10 columns then you will use repeat function.
+                           repeat(10, auto)
+                            here it says that repeat the columns 10 times 
+                             and do the width of the all the items auto.
+                             so using this all the blocks are divided in the 
+                               same nine columns having same width.  */
+
+
+                               grid-template-columns:repeat(3, auto);
+                               /* three columns will be created. */
+
+
+                               grid-gap: 2rem;
+                               /* gap is created between the columns of the
+                                  grid. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+        }
+
+
+
+        .item{
+            /* height: 100px; */
+            /* width: 100px; */
+            background-color:red ;
+            border: 2px solid black;
+            margin: 3px ;
+            padding: 15px 5px;
+
+
+        }
+        /* by using grid items can wander in two dimension.
+        and the container will becomes a grid and all the
+         child inside  the items from item-1 to item-9  
+           that will become grid-items  .
+           by using grid we are creating layout of the page.*/
+    </style>
+</head>
+<body>
+    <!-- css grid : css grid is the display property
+         creating a display you can create a block/box into 
+           grid. -->
+
+           <div class="container">
+            <!-- div.item{this is Item-$}*9 -->
+              <div class="item">this is Item-1</div>
+              <div class="item">this is Item-2</div>
+              <div class="item">this is Item-3</div>
+              <div class="item">this is Item-4</div>
+              <div class="item">this is Item-5</div>
+              <div class="item">this is Item-6</div>
+              <div class="item">this is Item-7</div>
+              <div class="item">this is Item-8</div>
+              <div class="item">this is Item-9</div>
+
+           </div>
+</body>
+</html>

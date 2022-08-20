@@ -1,0 +1,249 @@
+<!--#Flexbox is a one-dimensional layout method for 
+   laying out items in rows or columns.
+    #CSS flexbox is a better way to align
+      items into a container.
+    # Flexbox = flexible + box, flexbox is made up of two words 
+        flexible and box. flexible is for , that can
+        change according to the environment.
+    #  -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox Tutorial</title>
+        <style>
+         .container{
+            height:544px;
+            width: 100%;
+            border: 2px solid black;
+            /* to create the flexbox we will use 
+               display:flex; after that all the 
+                 element flexed and aligned vertically. */
+            display: flex;
+            /* using flex , container is become flex container
+               and items becomes flex items.
+               initialization of the container is done when 
+                 you choose display as flex. */
+
+           
+               
+             /* flex properties for flex container */
+            
+             flex-direction: row;
+                /* flex direction is by default  row , so
+                on choosing row it is not showing any changes.
+                 */
+
+              /*flex-direction: column;
+               by choosing column all the flex items align in column
+                manner. arrangement of items are vertical. */
+
+
+            /* flex-direction: row-reverse;
+            by selecting flex direction
+               row-reverse , by this ,
+                flex items are arranged in row in a 
+                 reverse manner. */
+
+
+
+                /* flex-direction: column-reverse;
+        by selecting this , flex items
+               are arranged in the reverse in column manner. */
+
+             /* flex-wrap: wrap;
+                 by default flex-wrap is nowrap
+                   but on selecting wrap, when the screen 
+                     will contract then flex items will go down to the 
+                      screen as we increase the contraction.  */
+
+            
+
+                  /* flex-wrap: wrap-reverse;
+                by selecting wrap-reverse , content get wrap 
+                    in a reverse direction.
+                    
+                    */
+
+
+                  /*  flex-flow: row-reverse wrap;
+                     here you can define both the properties
+                    first  flex direction and second flex wrap.flex flow is 
+                       the combination of the flex direction and flex wrap.
+                        you can use flex-flow to use both the 
+                          properties at one time.*/
+
+                 
+
+
+                          
+                    /* justify-content: center;
+                    when you inspect the page, at that time also content will
+                     be at the center.this aligns content to 
+                        the centrally. */
+
+
+                   /* justify-content: space-between;
+                     by using space between, there 
+                      will be gap between the boxes , 
+                       spacing is not start from the corner, 
+                        but from between the blocks.
+                         */
+
+
+                      /* justify-content: space-evenly;
+                  from start to end the spacing between
+                       blocks will be same.
+                       the spacing will start from corner to end. */
+
+                      justify-content: space-around;
+                      /* in space around , every block will take
+                       equal space from it's right and left side.
+                         so in the rightside there is space of both 
+                           the blocks (space of first box's rightside and
+                              space of second box's leftside ) so because of
+                               that the spacing of middle of the box 
+                                 has increased and start & end has low space than
+                                  middle of blocks. */
+
+
+
+                    
+
+                          /* align-items: center;
+      this vertically centers the blocks. */
+
+                           /* align-items: flex-end;
+                             blocks shifted to bottom. */
+
+                           /*  align-items: flex-start;
+                           flex start is a by default value.
+                           blocks are arranged at the top.*/
+
+                           align-items: stretch;
+                           flex-wrap: wrap;
+                           /* by using stretch on contract in a 
+                             inspect element it creates a equal spacing 
+                               between blocks.space like vertical space etc. */
+
+
+
+
+
+              
+
+             
+         }
+
+         .item{
+            width: 200px;
+            height:200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin:10px;
+            padding: 3px;
+
+         }
+
+         #item-1{
+           /* Flex properties for a flex item */
+           order:2;
+           /* by doing order:2 the first box will 
+             go to the end of the row(last position) and second box will be 
+               at the first position. */
+            /* flex-grow: 3;
+            in the flex-grow as the size of the
+              container increases the size of the
+                block will also increase.
+                more the no. of flex-grow more will
+                 be increase in the size of the block.
+                  */
+
+        }
+         #item-2{
+           /* in the flex , values are like this: 
+                   flex: flex grow  flex shrink  flex basis;
+              */
+               flex:2 2 230px; 
+
+
+
+
+              /* align-self:flex-end ;
+                by using this block will shift to the
+                 bottom of the flex. */
+               /*  align-self: flex-start;
+                  by using flex-start , block will shift 
+                   to the start position of the flex. */
+                align-self: center;
+                 /* by using center the block
+                    will shift to the 
+                      center position of the 
+                       flex. */
+
+
+
+               
+
+
+
+
+
+         }
+         #item-3{
+            order: 40;
+            /* here we have choosed order: 40
+             so whose order value will be higher that 
+               item will be go the end of the row.
+               now third box will go to the end of the 
+                row .because it contain higher order value.
+                which block have lower order , that will 
+                  at the start of the row. */
+              
+              
+              
+                  /* flex-grow: 5;
+            
+                 in the flex grow , there should
+                 not be the negative numbers. */
+
+                /* flex-shrink: 7;
+                  flex shrink work as a flex grow but in opposite
+                     manner, when you contract the block the more
+                      will be contraction in the block.
+                      more the no. of flex-shrink value 
+                        more will be the contraction of the block. */
+
+                    flex-basis:260px ;
+                    /* when flex-direction
+                    is set to row, then
+                    flex-basis will control width.
+                    and when flex-direction is set to
+                    column flex-basis will control
+                     height .*/
+         }
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <h1>This is Flexbox Tutorial.</h1>
+        <div class="container">
+            <div class="item" id="item-1">First Box</div>
+            <div class="item" id="item-2">Second Box</div>
+            <div class="item" id="item-3">Third Box</div>
+            <div class="item" id="item-4">Fourth Box</div>
+            <div class="item" id="item-5">Fifth Box</div>
+            <div class="item" id="item-6">Sixth Box</div>
+        </div>
+        <!-- display: block is for box .not to block something. -->
+
+
+    </body>
+    </html>

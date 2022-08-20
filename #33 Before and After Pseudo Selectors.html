@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudo selector.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color: black;
+            color:white;
+            
+        }
+         
+        header::before{
+            background: url(https://source.unsplash.com/user/wsanter) no-repeat center center/cover;
+            content: "";
+            position:absolute;
+            width:100%;
+            height:100%;
+            z-index: -1;
+            top:0;
+            left:0;
+            /* top 0 and left 0 will remove the spacing which is left at top side of the page. */
+            opacity: 0.5;
+            /* this opacity property 
+              lights the color of image as per respect to the content of the page. */
+
+        }
+
+
+
+      section{
+        height: 344px;
+        /* border: 2px solid red; */
+
+        margin:3px 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* justify centers the content 
+           in inside the block from all four directions. */
+
+
+       }
+       .navigation{
+        font-family:  'Edu TAS Beginner', cursive;
+        font-size: 20px;
+        display: flex;
+       }
+       li{
+        list-style: none;
+        padding: 20px 23px;
+       }
+
+       /* when you want to add some text before 
+          section or an block then you can use before pseudo 
+            selector. like this:  
+            section::before{
+                content: "this is the content which i have added before the section block. ";
+            }*/
+
+
+            /* when you want to add some text after
+              the any block then you can use after pseudo selector like this: 
+               */
+               section::after{
+                content: "this is the content which i am adding after the block and here the block is section."
+               }
+
+               h1{
+                font-family:  'Edu TAS Beginner', cursive;
+                font-size: 4rem;
+               }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+
+        </nav>
+        
+    </header>
+    <section>
+        <h1>Welcome to Coding World</h1>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam rem nostrum explicabo tempora, facilis reiciendis cupiditate odit cumque laboriosam distinctio ad quibusdam, optio autem placeat minima incidunt et quam omnis sint libero. Praesentium, pariatur.</p>
+     </section>
+     <hr>
+</body>
+</html>

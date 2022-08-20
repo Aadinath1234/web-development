@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Edu+TAS+Beginner:wght@600&display=swap" rel="stylesheet">
+    <style>
+       /* p{
+            font-family:cursive;
+        }
+        */
+        p{
+            font-family: 'Edu TAS Beginner', cursive;
+            font-size: 23px;
+            line-height:8.3em;
+            
+        }
+
+        span{
+            font-weight:lighter;
+            font-style: italic;
+         } /* by applying this in the span , the character inside 
+             the span will becomes lighter and italic in style. */
+
+        /* #pixel is the unit of font-size.
+           #pixel is the 1/96th of an inch.
+           #by font size you can adjust the size of the content.
+           #font-family are group of different types of fonts.
+           #line-height  is creates difference or spacing between lines from up to down.
+           # if you doing 1.3em if creates a small difference between the lines and when 
+            you are doing 8.3em then the spacing would be larger.
+           #em is the font size which is multiple of its parent font.
+           #font-weight is used to bold your font in the pages.
+            */
+
+        /* web-safe fonts are the fonts that comes preinstalled with your operating system. */
+        /* which fonts are not available on the os , is web font and we have to import it from the internet. */
+         /* you can stack fonts like you have many types of fonts in a group and 
+             if one is not present then second will be applied and when second is not available then third will
+              get executed and so on. 
+              eg. is font-family:Arial, Helvetica, sans-serif;
+              */
+         /* use google fonts to import font in your web pages. */
+            
+    </style>
+</head>
+<body>
+    <h4>CSS Fonts</h4>
+    <p>Lets play with fonts. It is very exciting</p>
+     <p>Lorem, ipsum dolor sit amet consectetur <span>adipisicing</span>  elit. Quaerat, facere.</p> 
+</body>
+</html>

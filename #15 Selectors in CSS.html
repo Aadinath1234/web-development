@@ -1,0 +1,92 @@
+ <!-- # css selectors are used to find the element whose  
+      property will be set.
+   # selectors are used to target the html elements.
+   # Selectors makes it easy for us to easily target
+      single/multiple HTML elements in the markup.
+      
+   # Types of CSS selectors:
+       # css element Selector.
+       # css id Selector
+       # css class Selector
+       # The CSS grouping Selector.
+-->
+<!-- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS Selectors</title>
+   <style>
+      /* inside the style section and in css  commentin done by  this symbols.forwardslash * and * forwardslash. */
+      <!-- this is a element selector, paragraph color:red . -->
+      p{
+         color: red;<!--when you remove this paragraph attribute then remaining are works like redelement and bgblue. -->
+      } 
+      
+       /* this is css comment. */
+    
+    
+    
+    
+    
+       p{
+      border:2px solid green;
+     }
+
+    #redElement{
+       color:blue;<!-- this is id selector , after adding this to style effect of the paragraph is not shown . 
+       -->
+       <!--here # is for id and . is for class -->
+    }
+    
+
+
+
+    #firstPara{
+      color:green;
+    }
+
+    
+    .redElement{
+      color:brown;<!-- . is for the class.-->
+
+    }
+    .bgBlue{
+       color:yellow;
+      background-color:blue;    <!-- you can multiple classes so we have added redelement and bgblue to class in the paragraph. where id is secondpara. -->
+   
+    }
+
+   footer,span{
+      background-color: pink;
+   }<!--this is example of grouping selectors. -->
+    </style>
+</head>
+<body>
+   <h3>CSS Selectors</h3>
+   <p>This is a simple paragraph to demostrate css selectors</p>
+   <p id="redElement">This is a another simple paragraph to demostrate css selectors</p>
+   <div><p >This is yet another simple paragraph inside div to demostrate css selectors</p>
+      <span>this is span</span>
+      </div>
+    <footer>this is footer</footer>
+    <!--this is example of id selector. -->
+    <p id="firstPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, ipsa.</p>
+     <!--this is example of class selector. -->
+    <p id="second para" class="redElement bgBlue" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique temporibus aliquam itaque nisi non repellat nostrum nemo doloribus adipisci voluptas asperiores omnis quas placeat, culpa iure. Suscipit dolorum impedit corporis quo cumque placeat, harum laudantium. Neque quisquam ad aliquid quas quae. Corrupti ipsam in unde, aliquam enim quae minima illum!</p>
+     
+
+   <!-- when you need only one block or line should be change then use id selector.
+       when you need same changes should be done on 
+        group of blocks or lines then use class selector. */
+    -->
+
+    
+
+</body>
+</html>
+       
+      
+      

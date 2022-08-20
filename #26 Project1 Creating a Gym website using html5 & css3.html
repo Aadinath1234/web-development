@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Harry Fitness</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* CSS Reset */
+       body{
+        font-family:  'Edu TAS Beginner', cursive;; 
+        color:#191519;
+        margin: 0px;
+        padding: 0px;
+        background:url('gym.jpg');
+        height:450px;
+        
+        
+       }
+
+       .left{
+         display: inline-block;
+         /* border: 2px solid red; */
+         position: absolute;
+         left:12px;
+         top: 7px;
+       }
+
+       .mid{
+        display: block;
+        width:44%;
+        margin:20px auto;
+        /* border: 2px solid green; */
+       }
+
+       .right{
+        /* for right here parent is header. */
+        right:34px;
+        top:28px;
+        position: absolute;
+        /* border: 2px solid yellow; */
+        display: inline-block;
+       }
+
+       .navbar{
+        display: inline-block;
+
+       }
+
+       .navbar li{
+        display: inline-block;
+        font-size: 16px;
+       }
+
+       .navbar li a{
+        color:#191519;;
+        text-decoration: none;
+        padding: 34px 13px;
+       }
+       
+       .navbar li a:hover, .navbar li a.active{
+        text-decoration: underline;
+        color:rgb(210, 30, 30);
+       }
+
+       .left img{
+        filter: invert(100%);
+        /* invert is used to reverse the effect if you have 
+           black image that will convert to white.
+            */
+        width:146px
+       }
+
+       .left div{
+        line-height: 13px;
+        text-align: center;
+        font-size:21px;
+       }
+
+       .btn{
+        font-family: 'Edu TAS Beginner', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        color:white;
+        padding: 4px 14px;
+        /* border: 2px solid grey; */
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+
+
+
+       }
+
+       .btn:hover{
+        background-color: blue;
+
+       }
+
+       .container{
+        border: 2px solid white;
+    margin: 91px 13px;
+    padding: 16px 65px;
+    width: 52%;
+    border-radius: 19px;
+}
+
+.form-group input{
+    
+    text-align: center;
+    display: block;
+    width: 380px;
+    padding: 5px;
+    border: 0px solid black;
+    margin: 6px auto;
+    font-size: 21px;
+    border-radius: 27px;
+
+}
+       
+
+.container h1{
+    text-align: center;
+
+}
+
+
+.container button{
+    display: block;
+    width: 94%;
+    margin: 17px auto;
+}
+
+}
+    </style>
+<body>
+ <header class="header">
+    <!-- left box for logo -->
+    <div class="left">
+        <!-- I am left. -->
+        <img src="gym2.jpg.jpg" alt="">
+        <div>Harry Fitness</div>
+    </div>
+    <!-- mid box for navbar(navigation) -->
+    <div class="mid">
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Fitness Calculator</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+           
+        </ul>
+    </div>
+    <!-- Right box for buttons. -->
+    <div class="right">
+        <button class="btn">Call us Now</button>
+        <button class="btn">Email us</button>
+        <!-- I am right. -->
+     </div>
+ </header>
+ <div class="container">
+    <!-- Mai ek container hoon. -->
+    <h1>Join the best gym of Delhi ,now.</h1>
+    <form action="noaction.php">
+        <!-- this noaction.php is not present here, we are 
+           not using backend. -->
+           <div class="form-group">
+            <input type="text" name="" placeholder="Enter your name">
+           </div>
+
+           <div class="form-group">
+            <input type="text" name="" placeholder="Enter your age">
+           </div>
+
+           <div class="form-group">
+            <input type="text" name="" placeholder="Enter your gender">
+           </div>
+
+           <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Locality">
+           </div>
+
+           <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Email id">
+           </div>
+
+           <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Phone Number">
+           </div>
+
+           <button class="btn">Submit</button>
+
+    </form>
+ </div>
+
+
+
+</body>
+</html>

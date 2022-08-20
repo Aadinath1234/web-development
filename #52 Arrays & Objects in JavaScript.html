@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <div class="container">Simple si html</div>
+    <script>
+        let myVar = 34;//integer variable
+        let myVar2 = "string"; // string variable
+        let myVar3 = true; // boolean
+        let myVar4 = null; //
+        let myVar5 =  undefined;//which do not contain any value.
+
+
+        //object stores key value pair.
+        let employee = {
+            name: "harry",
+            salary:10,
+            channel: "CodeWithHarry",
+            channel2: "ProgrammingWithHarry",
+
+        }
+        console.log(employee);
+        // output: {name: 'harry', salary: 10, channel: 'CodeWithHarry', channel2: 'ProgrammingWithHarry'}.
+        // when you have to access key , and there is spacing in the key name like: channel 2 then at the time of printing you have to use quotation 'channel 2'and if you are doing only channel 2 then it will throw an error.
+        // to access the object element:
+        console.log( employee.channel2 );
+        //output: ProgrammingWithHarry.
+       console.log(employee['channel2']);
+       //output: ProgrammingWithHarry.
+
+       
+
+
+
+
+
+
+
+
+
+
+        // array is also a object.it is a special type of object.
+        let names = [1,2,4, "Harry" , undefined];
+        console.log(names);
+        /*output:
+        (4) [1, 2, 4, 'Harry']
+        0: 1
+        1: 2
+        2: 4
+        3: "Harry"
+        4: undefined
+        length: 5
+        [[Prototype]]: Array(0)
+        */
+       console.log(names[0]); //output: 1, in names at 0th index 1 is present.
+       console.log(names[1]);//output: 2
+
+
+
+      /*  //another way to create an Array:by using new Array keyword.
+       let names1 = new Array(1,2,4, "Harry", undefined,"naya hai bhai");
+       console.log(names1[1]);//output: 2, 
+       console.log(names1);
+       output: [1, 2, 4, 'Harry', undefined, 'naya hai bhai']
+
+0: 1
+1: 2
+2: 4
+3: "Harry"
+4: undefined
+5: "naya hai bhai"
+length: 6
+[[Prototype]]: Array(0)
+﻿
+
+     console.log(names1.length);//output: 6 
+     */
+
+
+
+
+
+
+
+     let names1 = new Array(41,2,4, "Harry", undefined,"naya hai bhai");
+     console.log(names1);//output:[41, 2, 4, 'Harry', undefined, 'naya hai bhai']
+      //to sort the array then we will use:
+      names1 = names1.sort();
+      console.log(names1);
+      //output:  [2, 4, 41, 'Harry', 'naya hai bhai', undefined]
+      // to add the item to an array , we will use push()
+      names1.push("this is pushed inside the array.");
+      console.log(names1);//output:  [2, 4, 41, 'Harry', 'naya hai bhai', undefined, 'this is pushed inside the array.']
+      // to create an array of no. of elements like we are creating an array of 23 elements.
+      let names2 = new Array(23); //   here 23 is no. of elements in an array.
+      console.log(names2.length);
+      console.log(names2); //output:(23) [empty × 23] 
+      
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- 
+              SEARCHING FOR DATA IN MONGOdB:
+
+# query:
+ use harryKart 
+
+# to querying the database and want to find a particular value inside it by using query:
+ db.items.find({rating: 3.5}) // here rating:3.5 is called filter object.
+ //output: { "_id" : ObjectId("62f775d33d2220ce7d708628"), "name" : "Moto 30s", "price" : 29000, "rating" : 3.5, "qty" : 133, "sold" : 598 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862b"), "name" : "Moto 30s", "price" : 29000, "rating" : 3.5, "qty" : 133, "sold" : 598 }
+
+# to get the rating greater than equal to  3.5 , use this query:
+db.items.find({rating: {$gte: 3.5}})
+   // here the gte is for greater than equal to  .
+// to get the rating greater than 3.5
+   db.items.find({rating: {$gt:3.5}})
+   //output: { "_id" : ObjectId("62f7723a3d2220ce7d708626"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+{ "_id" : ObjectId("62f775d33d2220ce7d708627"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862a"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+
+//And operator:
+db.items.find({rating: {$gt: 3.5}, price:{$gt: 4000}})
+//output: 
+{ "_id" : ObjectId("62f7723a3d2220ce7d708626"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+{ "_id" : ObjectId("62f775d33d2220ce7d708627"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862a"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+
+
+//when you want rating less that 3.5 an price greater than 114000 then use this query:
+db.items.find({rating: {$lt: 3.5}, price:{$gt: 114000}})
+//output: 
+"_id" : ObjectId("62f775d33d2220ce7d708629"), "name" : "Realme 80s", "price" : 129000, "rating" : 2.5, "qty" : 633, "sold" : 98 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862c"), "name" : "Realme 80s", "price" : 129000, "rating" : 2.5, "qty" : 633, "sold" : 98, "isBig" : true }
+//while using the and operator we have not used the word or a symbol of and operator.
+
+
+//OR operator:
+db.items.find({$or:[{rating:{$lt:3.5}}, {price:{$gt: 114000}}]})
+{ "_id" : ObjectId("62f775d33d2220ce7d708629"), "name" : "Realme 80s", "price" : 129000, "rating" : 2.5, "qty" : 633, "sold" : 98 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862c"), "name" : "Realme 80s", "price" : 129000, "rating" : 2.5, "qty" : 633, "sold" : 98, "isBig" : true }
+> db.items.find({ $or:[{rating: {$gt: 3.5}}, {price:{$gt: 114000}}]})
+{ "_id" : ObjectId("62f7723a3d2220ce7d708626"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+{ "_id" : ObjectId("62f775d33d2220ce7d708627"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+{ "_id" : ObjectId("62f775d33d2220ce7d708629"), "name" : "Realme 80s", "price" : 129000, "rating" : 2.5, "qty" : 633, "sold" : 98 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862a"), "name" : "Samsung 30s", "price" : 22000, "rating" : 4.5, "qty" : 233, "sold" : 98 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862c"), "name" : "Realme 80s", "price" : 129000, "rating" : 2.5, "qty" : 633, "sold" : 98, "isBig" : true }
+if it got one the condition then it will execute that finded condition .
+
+
+
+ db.items.find({rating: {$gt:3.5}}, {rating: 1})
+{ "_id" : ObjectId("62f7723a3d2220ce7d708626"), "rating" : 4.5 }
+{ "_id" : ObjectId("62f775d33d2220ce7d708627"), "rating" : 4.5 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862a"), "rating" : 4.5 }
+rating : 1 means you want only rating and other parameters will be false.
+if you do rating 1 and qty 1 then it will only provide you information about rating and qty.
+ db.items.find({rating: {$gt:3.5}}, {rating: 1, qty: 1})
+//output: 
+{ "_id" : ObjectId("62f7723a3d2220ce7d708626"), "rating" : 4.5, "qty" : 233 }
+{ "_id" : ObjectId("62f775d33d2220ce7d708627"), "rating" : 4.5, "qty" : 233 }
+{ "_id" : ObjectId("62f777643d2220ce7d70862a"), "rating" : 4.5, "qty" : 233 }
+
+
+
+
+ -->
